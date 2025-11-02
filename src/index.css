@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171616;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+/* Animation for mobile menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float-1 { animation: float 6s ease-in-out infinite; }
+.animate-float-2 { animation: float 7s ease-in-out infinite 0.5s; }
+.animate-float-3 { animation: float 8s ease-in-out infinite 1s; }
+.animate-float-4 { animation: float 9s ease-in-out infinite 1.5s; }
+.animate-float-5 { animation: float 7s ease-in-out infinite 2s; }
+.animate-float-6 { animation: float 8s ease-in-out infinite 2.5s; }
+.animate-float-7 { animation: float 6s ease-in-out infinite 3s; }
+.animate-float-8 { animation: float 9s ease-in-out infinite 3.5s; }
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
