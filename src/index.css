@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.professional-bg {
+  background: linear-gradient(135deg, #000000 0%, #1a0000 25%, #330000 50%, #1a0000 75%, #000000 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  position: relative;
+}
+
+.professional-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -15,12 +42,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e3a8a;
+  background: #7c1a1a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
+  background: #af1e1e;
 }
 
 /* Animation for mobile menu */
@@ -86,6 +113,6 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #1e3a8a;
+  outline: 2px solid #8a1e22;
   outline-offset: 2px;
 }
