@@ -1,7 +1,6 @@
 import { BookOpen, Award, Users, Calendar, Star, Phone, Mail, MapPin, GraduationCap, TrendingUp, CheckCircle, Menu, X, Quote, ChevronDown, Clock, ArrowUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTheme } from './ThemeContext';
-import ThemeToggle from './ThemeToggle';
 import Sir from "./assets/rasikaSr.png";
 
 
@@ -46,10 +45,9 @@ function App() {
               <a href="#about" className="text-white hover:[color:#06283D] transition-colors">About</a>
               <a href="#services" className="text-white hover:[color:#06283D] transition-colors">Services</a>
               <a href="#pricing" className="text-white hover:[color:#06283D] transition-colors">Pricing</a>
+              <a href="#lms" className="text-white hover:[color:#06283D] transition-colors">LMS</a>
               <a href="#testimonials" className="text-white hover:[color:#06283D] transition-colors">Reviews</a>
               <a href="#contact" className="text-white hover:[color:#06283D] transition-colors">Contact</a>
-
-              <ThemeToggle />
             </div>
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -65,6 +63,7 @@ function App() {
               <a href="#about" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">About</a>
               <a href="#services" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">Services</a>
               <a href="#pricing" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">Pricing</a>
+              <a href="#lms" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">LMS</a>
               <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">Reviews</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)} className="block py-3 px-2 text-white hover:text-red-400 hover:bg-gray-800 rounded-lg transition-all">Contact</a>
             </div>
@@ -355,6 +354,94 @@ function App() {
         </div>
       </section>
 
+      <section id="lms" className="py-16 px-4 sm:px-6 lg:px-8 animate-fade-in" style={{ backgroundColor: currentTheme.colors.background }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Learning Management System</h2>
+            <p className="text-xl text-gray-300">Access your personalized learning dashboard anytime, anywhere</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Course Materials</h3>
+              <p className="text-gray-600 mb-4">Access video lessons, notes, and practice problems organized by topic and difficulty level.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Video tutorials</li>
+                <li>• Downloadable notes</li>
+                <li>• Practice worksheets</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Progress Tracking</h3>
+              <p className="text-gray-600 mb-4">Monitor your learning progress with detailed analytics and performance reports.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Performance dashboard</li>
+                <li>• Progress reports</li>
+                <li>• Skill assessments</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Assignments & Quizzes</h3>
+              <p className="text-gray-600 mb-4">Complete assignments and take quizzes with instant feedback and detailed solutions.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Interactive quizzes</li>
+                <li>• Homework submissions</li>
+                <li>• Instant feedback</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <Calendar className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Schedule Management</h3>
+              <p className="text-gray-600 mb-4">Book sessions, view upcoming classes, and manage your learning schedule.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Session booking</li>
+                <li>• Class calendar</li>
+                <li>• Reminder notifications</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Discussion Forum</h3>
+              <p className="text-gray-600 mb-4">Connect with fellow students and get help from instructors in our community forum.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Student discussions</li>
+                <li>• Q&A with teacher</li>
+                <li>• Study groups</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow border-2" style={{ borderColor: currentTheme.colors.primary }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: currentTheme.colors.primary }}>
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">Certificates & Badges</h3>
+              <p className="text-gray-600 mb-4">Earn certificates and achievement badges as you complete courses and reach milestones.</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Course certificates</li>
+                <li>• Achievement badges</li>
+                <li>• Progress milestones</li>
+              </ul>
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <a href="https://691098d62ec572d88b58e4a4--creative-figolla-8cac91.netlify.app/" className="inline-block bg-white px-8 py-4 rounded-full font-bold text-lg border-2 transition-all hover:scale-105 shadow-lg" style={{ color: currentTheme.colors.primary, borderColor: currentTheme.colors.primary }}>
+              Access LMS Portal
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 animate-fade-in">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -595,14 +682,34 @@ function App() {
                     <p className="text-white">Colombo, Sri Lanka</p>
                   </div>
                 </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-red-100 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-red-700" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">WhatsApp</p>
+                    <a href="https://wa.me/94773480852" className="text-white hover:text-green-400 transition-colors">+94 77 348 0852</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="p-8 rounded-2xl" style={{ backgroundColor: currentTheme.colors.surface, border: `1px solid ${currentTheme.colors.border}` }}>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target as HTMLFormElement);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const phone = formData.get('phone');
+                const level = formData.get('level');
+                const message = formData.get('message');
+                const whatsappMessage = `Hello! I'm interested in mathematics tutoring.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject Level: ${level}%0AMessage: ${message}`;
+                window.open(`https://wa.me/94773480852?text=${whatsappMessage}`, '_blank');
+              }}>
                 <div>
                   <label className="block text-sm font-semibold mb-2" style={{ color: currentTheme.colors.text }}>Full Name</label>
                   <input
                     type="text"
+                    name="name"
                     required
                     className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all"
                     style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}
@@ -613,6 +720,7 @@ function App() {
                   <label className="block text-sm font-semibold mb-2" style={{ color: currentTheme.colors.text }}>Email Address</label>
                   <input
                     type="email"
+                    name="email"
                     required
                     className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all"
                     style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}
@@ -620,9 +728,11 @@ function App() {
                   />
                 </div>
                 <div>
+
                   <label className="block text-sm font-semibold mb-2" style={{ color: currentTheme.colors.text }}>Phone Number</label>
                   <input
                     type="tel"
+                    name="phone"
                     required
                     className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all"
                     style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}
@@ -631,7 +741,7 @@ function App() {
                 </div>
                 <div>
                   <label htmlFor="subject-level" className="block text-sm font-semibold mb-2" style={{ color: currentTheme.colors.text }}>Subject Level</label>
-                  <select id="subject-level" aria-required="true" className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all" style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}>
+                  <select id="subject-level" name="level" aria-required="true" className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all" style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}>
                     <option value="">Select your level</option>
                     <option value="ol">O/L Mathematics</option>
                     <option value="al-pure">A/L Pure Mathematics</option>
@@ -643,6 +753,7 @@ function App() {
                 <div>
                   <label className="block text-sm font-semibold mb-2" style={{ color: currentTheme.colors.text }}>Message</label>
                   <textarea
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:border-transparent outline-none transition-all"
                     style={{ borderColor: currentTheme.colors.border, backgroundColor: currentTheme.colors.background, color: currentTheme.colors.text }}
@@ -654,8 +765,8 @@ function App() {
                   className="w-full text-white py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                   style={{ backgroundColor: currentTheme.colors.primary }}
                 >
-                  <Mail className="w-5 h-5" />
-                  <span>Send Message</span>
+                  <Phone className="w-5 h-5" />
+                  <span>Send via WhatsApp</span>
                 </button>
               </form>
             </div>
