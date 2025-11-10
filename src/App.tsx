@@ -435,7 +435,7 @@ function App() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <a href="https://691098d62ec572d88b58e4a4--creative-figolla-8cac91.netlify.app/" className="inline-block bg-white px-8 py-4 rounded-full font-bold text-lg border-2 transition-all hover:scale-105 shadow-lg" style={{ color: currentTheme.colors.primary, borderColor: currentTheme.colors.primary }}>
+            <a href="https://69116a10bfa55e9abc3174ae--creative-figolla-8cac91.netlify.app/" className="inline-block bg-white px-8 py-4 rounded-full font-bold text-lg border-2 transition-all hover:scale-105 shadow-lg" style={{ color: currentTheme.colors.primary, borderColor: currentTheme.colors.primary }}>
               Access LMS Portal
             </a>
           </div>
